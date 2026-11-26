@@ -568,6 +568,23 @@ footer .copy{color:var(--soft);font-size:.78rem;width:100%;text-align:center;mar
   footer .container{flex-direction:column;text-align:center}
   footer .fb{flex-direction:column;gap:8px}
 }
+
+/* ===== Alvos de toque de 44 px (so a area de toque cresce; o desenho fica igual) ===== */
+.brand{padding:8px 0;margin:-8px 0}
+.chip{position:relative;isolation:isolate;background:none;border:0;padding:11.8px 13px;border-radius:0}
+.chip::before{content:"";position:absolute;inset:2.8px 0;background:#1f2c34;border:1px solid #2f3b43;border-radius:16px;z-index:-1;transition:background .15s,border-color .15s}
+.chip:hover{background:none}
+.chip:hover::before{background:#2a3942;border-color:#25d36666}
+.chips-label{margin-bottom:3.2px}
+.chips{padding-bottom:3.2px}
+.sim-reset{padding:11.5px 0;margin-top:2.5px;margin-bottom:-11.5px}
+.wa-bubble-txt{padding-top:1.5px;padding-bottom:1.5px;margin-top:-1.5px;margin-bottom:-1.5px}
+.wa-bubble-x{width:44px;height:44px;padding:11px;margin:-11px;background-clip:content-box}
+.lz .faq a,.legal-line a{padding:14px 0;border-bottom:0;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 13px)/100% 1px no-repeat}
+.legal-line a{background-image:linear-gradient(#d7d9de88,#d7d9de88)}
+.legal-line a:hover{background-image:linear-gradient(#fff,#fff)}
+.footer-links a{padding:11.5px 0;margin:-11.5px 0 -10.5px;border-bottom:0;background:linear-gradient(transparent,transparent) 0 calc(100% - 10.5px)/100% 1px no-repeat}
+.footer-links a:hover{background-image:linear-gradient(#fff,#fff)}
 </style>
 </head>
 <body>
