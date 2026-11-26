@@ -1638,7 +1638,7 @@ function openLegal(h){
   document.title=(h==="termos"?"Termos de Uso":"Política de Privacidade")+" · TELS Company";
   return true;
 }
-document.querySelectorAll("[data-legal]").forEach(a=>a.addEventListener("click",e=>{ e.preventDefault(); openLegal(a.dataset.legal); }));
+/* links [data-legal] abrem as paginas privacidade.html e termos-de-uso.html */
 function routeLegal(){
   const h=location.hash.replace("#","");
   const tpl=document.getElementById("tpl-"+h);
@@ -1800,7 +1800,7 @@ document.querySelectorAll(".rv").forEach(el=>io.observe(el));
       <input id="tqIn" type="text" placeholder="Mensagem" aria-label="Sua resposta" maxlength="400" disabled/>
       <button class="tq-send" id="tqSend" type="button" aria-label="Enviar" disabled><svg viewBox="0 0 24 24"><path d="M3.4 20.4 21 12 3.4 3.6 3.39 10.2 15 12 3.39 13.8z"/></svg></button>
     </div>
-    <div class="tq-foot">Ao responder, você concorda com a <a href="#privacidade" data-tq-legal>Política de Privacidade</a>.</div>
+    <div class="tq-foot">Ao responder, você concorda com a <a href="privacidade.html" data-tq-legal>Política de Privacidade</a>.</div>
   </div>
 </div>
 
@@ -1861,7 +1861,7 @@ const TELS_QUIZ = {
   }
   tq.querySelectorAll("[data-tq-close]").forEach(b=>b.addEventListener("click",close));
   document.addEventListener("keydown",e=>{ if(e.key==="Escape" && tq.classList.contains("open")) close(); });
-  tq.querySelector("[data-tq-legal]").addEventListener("click",e=>{ e.preventDefault(); close(); location.hash="privacidade"; });
+  
 
   // Todos os botões de WhatsApp do site abrem o chat
   document.addEventListener("click",e=>{
