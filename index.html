@@ -1511,6 +1511,28 @@ document.querySelectorAll(".rv").forEach(el=>io.observe(el));
   .tq-bg{display:none}
   .tq-hours{grid-template-columns:repeat(3,1fr)}
 }
+
+/* ===== Alvos de toque de 44 px no questionario (so a area de toque cresce; o desenho fica igual) ===== */
+.tq-x{width:44px;height:44px;margin:-4px;padding:4px;background-clip:content-box}
+.tq-av{width:44px;height:44px;margin:-2px;padding:2px;background-clip:content-box}
+.tq-av img{border-radius:50%}
+.tq-comp input{height:44px;margin:-1px 0;border:solid transparent;border-width:1px 0;border-radius:22px;background-clip:padding-box}
+.tq-send{width:44px;height:44px;margin:-1px;border:1px solid transparent;background-clip:padding-box}
+.tq-foot a{padding:16px 0}
+.tq-opt{position:relative;isolation:isolate;background:none;border-color:transparent;padding-top:12px;padding-bottom:12px;margin-top:-4px;margin-bottom:-4px}
+.tq-opt::after{content:"";position:absolute;inset:3px -1px;border-radius:inherit;background:#202c33;border:1px solid #00a88440;z-index:-1;transition:background .15s,border-color .15s}
+.tq-opts.col .tq-opt{padding-top:12px;padding-bottom:12px;margin-top:-2px;margin-bottom:-2px}
+.tq-opts.col .tq-opt::after{inset:1px -1px}
+.tq-hours .tq-opt{padding-top:12px;padding-bottom:12px;margin-top:-3px;margin-bottom:-3px}
+.tq-hours .tq-opt::after{inset:2px -1px}
+.tq-opt:hover{background:none;border-color:transparent}
+.tq-opt:hover::after{background:#2a3942;border-color:#00a884}
+.tq-opt.on{background:none;border-color:transparent}
+.tq-opt.on::after{background:#00a88422;border-color:#00a884}
+.tq-opt.go{background:none;border-color:transparent}
+.tq-opt.go::after{background:#00a884;border-color:#00a884}
+.tq-opt.ghost{border-color:transparent}
+.tq-opt.ghost::after{border-color:#ffffff1f}
 </style>
 
 <div class="tq" id="tq" aria-hidden="true">
